@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form'
 import { FaRetweet } from 'react-icons/fa'
+import currencies from './utils/currencies.js'
 
 export default function Select() {
     return (
@@ -9,15 +10,14 @@ export default function Select() {
   
           <Form.Select size="lg">
             <option>Select Currency</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            {currencies.map(curr=> {
+              <option value={curr.currency}>{curr.currency}</option>
+            })}
           </Form.Select>
           <div>
             <FaRetweet className="swap-icon" size={56} />
           </div>
-          <Form.Select size="lg">
+          <Form.Select size="lg" >
             <option>Select Currency</option>
             <option value=""></option>
             <option value=""></option>
