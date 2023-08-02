@@ -1,16 +1,16 @@
 import Form from 'react-bootstrap/Form'
 import { FaRetweet } from 'react-icons/fa'
-import currencies from './utils/currencies.js'
+import currencies from '/src/utils/currencies.js'
+
 
 export default function Select() {
     return (
       <Form>
         <Form.Group>
   
-  
           <Form.Select size="lg">
             <option>Select Currency</option>
-            {currencies.map(curr=> {
+            {currencies.map((curr)=> {
               <option value={curr.currency}>{curr.currency}</option>
             })}
           </Form.Select>

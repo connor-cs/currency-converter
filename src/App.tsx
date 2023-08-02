@@ -10,7 +10,7 @@ const KEY = "fca_live_g8psjoZmt4fMQik3MIkdDyYhsL4glGwRSj9gUz8N";
 const URL =
   "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_g8psjoZmt4fMQik3MIkdDyYhsL4glGwRSj9gUz8N&base_currency=USD&currencies=CNY";
 
-interface Currency {
+interface Currency  {
   from: {
     name: string;
     amount: string;
@@ -23,10 +23,11 @@ interface Currency {
   };
 }
 
-function App() {
+function App(params: Currency) {
+  
   const [currencies, setCurrencies] = useState<Currency>({
-    from: Currency,
-    to: Currency,
+    from: {},
+    to: {}
   });
 
   return (
